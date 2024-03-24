@@ -1,5 +1,6 @@
 :root{
     --whiteColor: invert(100%) sepia(9%) saturate(2829%) hue-rotate(295deg) brightness(114%) contrast(101%);
+    --grayColor: invert(0%) sepia(1%) saturate(4211%) hue-rotate(318deg) brightness(94%) contrast(84%);
 }
 *{
     margin: 0;
@@ -46,21 +47,28 @@ body{
 .dashboard h1{
     font-size: 2rem;
     color: white;
+    user-select: none;
 }
-.navSection1{
+.navSection{
     padding: 0rem 3rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.navSection1 img{
+.navSection img{
     width: 2rem;
     height: 2rem;
     filter: var(--whiteColor);
 }
-.navSection1 h1{
+.navSection h1{
     font-size: 1.5rem;
     color: white;
+    user-select: none;
+    transition: 300ms ease-in;
+}
+.navSection h1:hover{
+    cursor: pointer;
+    color: #156FAB;
 }
 .navItem{
     display: flex;
@@ -68,18 +76,115 @@ body{
     align-items: center;
     gap: 2rem;
 }
-.navSection2{
+.site-content{
+    display: flex;
+    flex-direction: column;
+}
+.content-top{
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0rem 0.375rem 0.75rem -0.125rem, rgba(0, 0, 0, 0.3) 0rem 0.1875rem 0.4375rem -0.1875rem;
     padding: 1rem 3rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.navSection2 img {
-    width: 2rem;
-    height: 2rem;
-    filter: var(--whiteColor);
+.content-bottom{
+    width: 100%;
 }
-.navSection2 h1{
+.topBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.searchBar img{
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: var(--grayColor);
+}
+.searchBar input{
+    width: 40vw;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: #E2E8F0;
+    border: none;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+.profile img{
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: var(--grayColor);
+}
+.profile h1{
+    font-size: 1.25rem;
+    font-weight: bolder;
+    user-select: none;
+}
+.profile img:nth-child(2) {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    filter: none;
+}
+.greeting{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.greeting img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+}
+.greetingText{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.greetingText p{
+    font-weight: 600;
+    user-select: none;
+}
+.greetingText h1{
+    font-weight: bold;
     font-size: 1.5rem;
+    user-select: none;
+}
+.bottomBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottomButtons{
+    display: flex;
+    gap: 2rem;
+}
+.bottomButtons button{
+    width: 6rem;
+    height: 3rem;
+    background-color: #1992D4;
     color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    transition: 300ms ease-in;
+}
+.bottomButtons button:hover{
+    cursor: pointer;
+    background-color: #1A82C3;
 }
