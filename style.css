@@ -1,6 +1,7 @@
 :root{
     --whiteColor: invert(100%) sepia(9%) saturate(2829%) hue-rotate(295deg) brightness(114%) contrast(101%);
     --grayColor: invert(0%) sepia(1%) saturate(4211%) hue-rotate(318deg) brightness(94%) contrast(84%);
+    --blueColor: invert(38%) sepia(90%) saturate(807%) hue-rotate(168deg) brightness(103%) contrast(86%);
 }
 *{
     margin: 0;
@@ -10,14 +11,14 @@
 }
 body{
     height: 100vh;
-    overflow: hidden;
+    background: linear-gradient(to right, #1992D4 25%, #E2E8F0 25%);
 }
 .container{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    
 }
 .nav-bar{
     width: 25vw;
@@ -173,12 +174,12 @@ body{
 }
 .bottomButtons button{
     width: 6rem;
-    height: 3rem;
+    height: 2.5rem;
     background-color: #1992D4;
     color: white;
     font-weight: bold;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     transition: 300ms ease-in;
 }
 .bottomButtons button:hover{
@@ -186,70 +187,98 @@ body{
     background-color: #1A82C3;
 }
 .content-bottom{
-    padding: 2rem 3rem 3rem 1.5rem;
+    padding: 1rem 3rem 3rem 3rem;
+    height: 100%;
+}
+.header-container{
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    grid-gap: 1rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr;
+  grid-template-rows: repeat(6, 1fr);
+  height: 100%;
+  grid-gap: 1rem;
+}
+.blog{
+    grid-row: span 2;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #1992D4 2.5%, white 2.5%);
+    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    line-height: 1.5rem;
+    padding: 0rem 2rem;
+}
+.blog h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.blog p{
+    font-weight: 600;
+    color: #636363;
+}
+.blogImages{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 1rem;
 }
-#heading{
+.blogImages img{
+    width: 2rem;
+    height: 2rem;
+    filter: var(--grayColor);
+    transition: 300ms ease-in;
+}
+.blogImages img:hover{
+    cursor: pointer;
+    filter: var(--blueColor);
+}
+.news{
+    grid-row: span 3;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: left;
+    line-height: 1.5rem;
+    padding: 0rem 2rem;
+}
+.news p{
+    font-weight: 600;
+    color: #636363;
+}
+.header{
     font-size: 1.5rem;
-    color: black;
-    user-select: none;
+    margin-bottom: 0.5rem;
     font-weight: bold;
 }
-.projectGrid {
-    padding-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, 20vw);
-    grid-template-rows: repeat(3, 22vh);
-    gap: 1rem;
+#announce{
+    text-align: center;
 }
-.gridBox{
-    border-radius: 1rem;
-    background: linear-gradient(to right, #F0B429 2.5%, white 2.5%);
-    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
-}
-.announcementGrid{
-    margin-top: 1rem;
-    width: 14vw;
-    height: 24vh;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.trendingGrid{
-    margin-top: 1rem;
-    width: 14vw;
-    height: 24vh;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.announcements{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.trendingBox{
+.personContainer{
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
-.trendingBox img{
+.personText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.personContainer img{
     width: 3rem;
     height: 3rem;
     border-radius: 1.5rem;
-}
-.trendText{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
