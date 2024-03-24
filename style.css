@@ -88,9 +88,6 @@ body{
     flex-direction: column;
     gap: 2rem;
 }
-.content-bottom{
-    width: 100%;
-}
 .topBar{
     display: flex;
     flex-direction: row;
@@ -187,4 +184,72 @@ body{
 .bottomButtons button:hover{
     cursor: pointer;
     background-color: #1A82C3;
+}
+.content-bottom{
+    padding: 2rem 3rem 3rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#heading{
+    font-size: 1.5rem;
+    color: black;
+    user-select: none;
+    font-weight: bold;
+}
+.projectGrid {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 20vw);
+    grid-template-rows: repeat(3, 22vh);
+    gap: 1rem;
+}
+.gridBox{
+    border-radius: 1rem;
+    background: linear-gradient(to right, #F0B429 2.5%, white 2.5%);
+    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
+}
+.announcementGrid{
+    margin-top: 1rem;
+    width: 14vw;
+    height: 24vh;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.trendingGrid{
+    margin-top: 1rem;
+    width: 14vw;
+    height: 24vh;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.122rem 0.122rem 0.1625rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.announcements{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.trendingBox{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.trendingBox img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+}
+.trendText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
